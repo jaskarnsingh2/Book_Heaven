@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "4000:80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - project
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin:latest
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_HOST=db
+    networks:
+      - project
+
+  db:
+    image: mariadb:latest
+    environment:
+      - MARIADB_ROOT_PASSWORD=pass123
+      - MARIADB_DATABASE=book_haven
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - project
+
+networks:
+  project:
+
+volumes:
+  db_data:

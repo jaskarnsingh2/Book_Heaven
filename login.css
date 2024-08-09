@@ -1,0 +1,102 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85); /* Slightly less transparent */
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+}
+
+/* Heading Styling */
+.container h1 {
+    margin-bottom: 25px;
+    color: #2c3e50; /* Darker color for contrast */
+    font-size: 24px; /* Slightly larger heading */
+    font-weight: bold;
+    letter-spacing: 1px; /* Slight spacing for readability */
+}
+
+/* Label Styling */
+.container label {
+    display: block;
+    margin: 15px 0 5px;
+    color: #34495e; /* Medium dark color for labels */
+    font-size: 14px;
+    text-align: left; /* Align text to the left */
+}
+
+/* Input Styling */
+.container input {
+    padding: 12px;
+    width: calc(100% - 26px);
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7; /* Light grey border */
+    border-radius: 5px;
+    color: #2c3e50; /* Darker text color for better contrast */
+    background-color: #ecf0f1; /* Light grey background */
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s; /* Smooth transition for focus effect */
+}
+
+/* Input Focus Effect */
+.container input:focus {
+    border-color: #2980b9; /* Blue border on focus */
+    outline: none;
+}
+
+/* Button Styling */
+.container button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient button background */
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s; /* Smooth hover effect */
+}
+
+/* Button Hover Effect */
+.container button:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #e74c3c; /* Red color for error messages */
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
